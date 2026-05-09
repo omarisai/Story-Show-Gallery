@@ -42,4 +42,5 @@ jobs:
             NODE_ENV: production
 
       - name: Output published image
-        run: echo "Docker image published: ghcr.io/${{ github.repository_owner }}/story-show-gallery:latest"
+        run: |
+          echo "Docker image published: ghcr.io/${{ github.repository_owner }}/story-show-gallery:latest"
