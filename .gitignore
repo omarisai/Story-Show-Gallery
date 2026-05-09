@@ -5,3 +5,4 @@ example/index.html
 dist.html
 *.log
 .htaccess
+images/
