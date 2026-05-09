@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  proxy-network:
+    external: true
+
+services:
+  apps:
+    image: ghcr.io/omarisai/story-show-gallery:latest
+    container_name: ssg-anouncements
+    hostname: ssg-anouncements
+    networks:
+      - proxy-network
+    ports:
+      - "3024:80" 
+    volumes:
+      - ./srv/ssg/images:/usr/share/nginx/html/images
+    restart: unless-stopped

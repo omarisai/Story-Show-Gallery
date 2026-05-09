@@ -7,6 +7,8 @@ on:
       - master
     tags:
       - 'v*'
+    paths-ignore:
+      - 'docker-compose.yml'
 
 jobs:
   build-and-publish:
