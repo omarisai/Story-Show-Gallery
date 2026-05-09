@@ -14,5 +14,5 @@ services:
     ports:
       - "3024:80" 
     volumes:
-      - ./srv/ssg/images:/usr/share/nginx/html/images
+      - /srv/ssg/images:/usr/share/nginx/html/images
     restart: unless-stopped
