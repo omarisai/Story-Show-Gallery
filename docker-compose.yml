@@ -12,7 +12,5 @@ services:
     networks:
       - proxy-network
     ports:
-      - "3024:80" 
-    volumes:
-      - /srv/ssg/images:/usr/share/nginx/html/images
+      - "3024:80"
     restart: unless-stopped
