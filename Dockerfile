@@ -1,10 +1,14 @@
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Copy the site sources, install dependencies, and generate index.html from images/
+COPY . .
+RUN npm ci && npm run generate
+
 FROM nginx:alpine
 
-# Copy the static site content into nginx web root
-COPY . /usr/share/nginx/html
+# Copy the generated static site into nginx web root
+COPY --from=builder /app /usr/share/nginx/html
 
-# Expose the default nginx port
 EXPOSE 80
-
-# Run nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]

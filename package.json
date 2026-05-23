@@ -13,6 +13,7 @@
     "uglifyJS": "uglifyjs src/ssg.js --compress --mangle --comments /^/*!/ --output dist/ssg.min.js",
     "uglifyCSS": "uglifycss --debug src/ssg.css > dist/ssg.min.css",
     "uglifyGO": "uglifycss --debug src/GridOverflow3D.css > dist/GridOverflow3D.min.css",
+    "generate": "node scripts/generate-gallery.js",
     "dist": "del /Q dist && npm run uglifyJS && npm run uglifyCSS && npm run uglifyGO"
   },
   "repository": {

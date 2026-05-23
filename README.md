@@ -161,6 +161,13 @@ Part of the configuration are also [SSG events](https://roman-flossler.github.io
 
 <br>
 
+## Build-time gallery generation
+
+Use `npm run generate` to build `index.html` from the current `images/` folder.
+The generator reads `index.template.html` and injects one gallery item per image file.
+
+If you change gallery settings or page layout, edit `index.template.html` and rerun `npm run generate`.
+
 ## Minifying
 
 If you modify source files (src folder), you will probably want to minify the result. Use existing npm script:
